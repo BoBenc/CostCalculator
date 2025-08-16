@@ -21,7 +21,8 @@ public class Storage {
         ArrayList<Costs> costList = new ArrayList<Costs>();
         File file = new File("costs.txt");
         try(Scanner sc = new Scanner(file)) {
-            while (sc.hasNext()) {
+            sc.nextLine();
+            while (sc.hasNextLine()) {
                 String line = sc.nextLine();
                 String[] parts = line.split(";");
                 Costs cost = new Costs();

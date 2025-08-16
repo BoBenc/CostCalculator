@@ -31,7 +31,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField editable="false" layoutX="437.0" layoutY="353.0" prefHeight="25.0" prefWidth="155.0" />
+      <TextField fx:id="allCostField" editable="false" layoutX="437.0" layoutY="353.0" prefHeight="25.0" prefWidth="155.0" />
       <Button layoutX="71.0" layoutY="278.0" mnemonicParsing="false" onAction="#onClickModifyButton" prefHeight="27.0" prefWidth="190.0" text="Módosítás">
          <font>
             <Font size="13.0" />
