@@ -42,6 +42,8 @@ public class MainController {
     }
 
     protected void loadCosts() {
+        costsList.sort((c1, c2) -> Integer.compare(c1.getId(), c2.getId()));
+        Storage.writeCosts(costsList);
         itemsListView.getItems().clear();
         int totalCost = 0;
         for (Costs costs : costsList) {
@@ -155,8 +157,10 @@ public class MainController {
                 cost.setPrice(priceSpinner.getValue());
                 cost.setCategory(categoryCombo.getValue());
                 cost.setComment(commentArea.getText());
+                break;
             }
         }
+        Storage.writeCosts(costsList);
         loadCosts();
     }
 }
